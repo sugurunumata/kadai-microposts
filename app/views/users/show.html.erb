@@ -28,6 +28,11 @@
           <span class="badge"> <%= @count_followers %> </span>
         <% end %>
       </li>
+      </li>
+      <li class=" <%= 'active' if current_page?(favoritelists_user_path(@user)) %> ">
+        <%= link_to favoritelists_user_path(@user) do %> Favoriteilists 
+        <% end %>
+      </li>
     </ul>
     
     <%= render 'microposts/microposts', microposts: @microposts, user: @user %>

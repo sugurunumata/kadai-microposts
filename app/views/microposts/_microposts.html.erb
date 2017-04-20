@@ -16,6 +16,7 @@
           <p> <%= micropost.content %> </p>
         </div>
         <div>
+          <%= render 'favoritelists/favorite_button',tweet: micropost, user: user %>
           <% if current_user == micropost.user %>
           <%= link_to "Delte", micropost, method: :delete, data: {confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
             <% end %>
